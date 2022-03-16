@@ -1,0 +1,11 @@
+<%- include('../partials/header'); %>
+<main class="main container-fluid">
+    <!-- The regex is necessary. Otherwise every image is broken. -->
+    <img class="character-image img-fluid" src="<%- `${data.image.replace(/\/revision.*/, '')}` %>" alt="<%= data.name %>" />
+    <p>Information:</p>
+    <ul class="character-data">
+        <li>Nationality: <%= data.bio.nationality %></li>
+        <li>First appearance: <%= data.chronologicalInformation.firstAppearance %></li>
+    </ul>
+</main>
+<%- include('../partials/footer'); %>
