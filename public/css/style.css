@@ -1,1 +1,37 @@
+/* global section */
+
 * {box-sizing: border-box;}
+
+.container-fluid {
+    margin: 1rem auto;
+    width: 80%;
+}
+
+/* header section */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* main section */
+
+
+.characters-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.character-box {
+    padding: 1rem;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.character-box p {
+    margin: 1rem;
+    font-size: 24px;
+    text-align: center;
+}
