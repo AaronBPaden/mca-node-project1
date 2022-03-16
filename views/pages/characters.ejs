@@ -1,0 +1,16 @@
+<%- include('../partials/header'); %>
+<main class="main container-fluid">
+    <% data.forEach(el => { %>
+        <a href="characters/<%= el.id %>">
+            <div className="character-box">
+                <!-- The regex is necessary. Otherwise every image is broken. -->
+                <img className="img-fluid" src="<%- `${el.image.replace(/\/revision.*/, '')}` %>" alt="<%= el.name %>" />
+                <p className="character-name">
+                    <!-- Some names are completely missing in the API... -->
+                    <%- el.name ? `${el.name}` : "Name missing" %>
+                </p>
+            </div>
+        </a>
+    <% }); %>
+</main>
+<%- include('../partials/footer'); %>
